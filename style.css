@@ -1,0 +1,493 @@
+:root {
+    --primary-color: #55AA55;
+    /* Hijau Minecraft (Grass Block) */
+    --secondary-color: #AAAAAA;
+    /* Abu-abu Batu */
+    --background-translucent-dark: rgba(20, 20, 20, 0.7);
+    /* Latar belakang konten gelap transparan */
+    --background-translucent-light: rgba(255, 255, 255, 0.7);
+    /* Latar belakang konten terang transparan */
+    --text-color: #212121;
+    --text-light: #EEEEEE;
+    --font-family: 'VT323', monospace;
+    --max-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.5;
+    color: var(--text-color);
+
+    /* BACKGROUND BLOK PIKSEL UTAMA */
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAD9JREFUOE/tTjEOACEIQjM7+L80hK62V0w1D8t5vY8Gg8E31g8Hk8k/Hzyez+f7D2gYjcfj/3/AAABv0gL0v53/AAAAAElFTkSuQmCC');
+    /* Ini adalah pattern blok 24x24px */
+    background-repeat: repeat;
+    background-size: 24px 24px;
+    background-color: #87CEEB;
+    /* Warna dasar langit atau background yang lebih cerah */
+}
+
+body,
+a,
+button,
+.contact-link-item {
+    transition: all 0.2s ease-in-out;
+}
+
+.school-detail {
+    margin: 5px 0 0 0;
+    font-size: 0.9em;
+    color: var(--text-light);
+}
+
+.btn {
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-weight: 400;
+    border: 3px solid var(--text-color);
+    box-shadow: 2px 2px 0px var(--text-color);
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #3D883D;
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0px var(--text-color);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 3px solid var(--text-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0px var(--text-color);
+}
+
+section {
+    padding: 60px 5%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+
+    /* Kontainer utama untuk bagian Hero, About, Contact */
+    /* Berikan latar belakang transparan */
+    background-color: var(--background-translucent-dark);
+    /* Warna gelap transparan untuk section */
+    border: 3px solid var(--text-light);
+    /* Border terang agar kontras */
+    border-radius: 8px;
+    /* Sudut sedikit membulat untuk membedakan dari elemen lain */
+    margin-bottom: 40px;
+    /* Jarak antar section */
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+    /* Shadow untuk efek timbul */
+}
+
+/* Modifikasi pada header */
+h1,
+h2,
+h3 {
+    font-weight: 400;
+    color: var(--text-light);
+    /* Teks menjadi terang karena background gelap */
+    text-shadow: 3px 3px 0px var(--primary-color);
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header {
+    background-color: var(--background-translucent-dark);
+    /* Header juga transparan */
+    box-shadow: 0 4px 0px var(--text-light);
+    border-bottom: 3px solid var(--text-light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    border-radius: 0;
+    /* Header tidak perlu border radius */
+}
+
+.logo {
+    font-size: 1.4em;
+    color: var(--text-light);
+    /* Warna logo juga terang */
+    text-shadow: 1px 1px 0px var(--primary-color);
+}
+
+.nav-menu a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: var(--text-light);
+    /* Tautan nav terang */
+    font-weight: 400;
+}
+
+.nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: var(--text-light);
+    /* Tombol hamburger terang */
+    cursor: pointer;
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    min-height: 80vh;
+    background-color: transparent;
+    /* Hero section tidak perlu background-color ini */
+    border: none;
+    /* Hero section tidak perlu border ini */
+    box-shadow: none;
+    /* Hero section tidak perlu shadow ini */
+    margin-bottom: 0;
+    /* Hero tidak ada margin bottom */
+}
+
+.hero-content {
+    max-width: 55%;
+    animation: fadeInSlide 0.8s ease-out forwards;
+    opacity: 0;
+
+    /* Konten Hero juga perlu background transparan agar terlihat seperti di Image 1 */
+    background-color: var(--background-translucent-dark);
+    /* Latar belakang untuk konten hero */
+    padding: 30px;
+    border-radius: 8px;
+    border: 3px solid var(--text-light);
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    color: var(--text-light);
+    /* Warna teks disesuaikan */
+    text-shadow: 4px 4px 0px var(--primary-color);
+}
+
+.greeting,
+.tagline {
+    font-weight: 400;
+    color: var(--text-light);
+    /* Warna teks disesuaikan */
+    text-shadow: none;
+}
+
+.role {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 0px var(--text-dark);
+    /* Menggunakan text-dark untuk shadow */
+}
+
+.hero-actions a {
+    margin-right: 15px;
+    color: var(--text-light);
+    /* Tombol juga perlu warna teks terang */
+}
+
+.social-links {
+    margin-top: 30px;
+}
+
+.social-links a {
+    font-size: 1.5em;
+    color: var(--text-light);
+    /* Ikon sosial terang */
+    margin-right: 20px;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+.hero-image {
+    max-width: 10%;
+    border: 5px solid var(--text-light);
+    border-radius: 0;
+    box-shadow: 4px 4px 0px var(--text-light);
+}
+
+.hero-image .profile-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0;
+    border: none;
+}
+
+.about-section {
+    background-color: var(--background-translucent-dark);
+    /* Transparan */
+    border-top: none;
+    /* Border sudah di section parent */
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    align-items: start;
+    text-align: left;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    font-size: 1em;
+    color: var(--text-light);
+    /* Teks terang */
+}
+
+.skills-list {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Skills list lebih transparan */
+    border: 2px solid var(--text-light);
+    border-radius: 0;
+    box-shadow: 3px 3px 0px var(--secondary-color);
+    padding: 20px;
+}
+
+.skills-list h3 {
+    margin-bottom: 15px;
+    color: var(--text-light);
+    /* Teks terang */
+}
+
+.skills-list ul {
+    list-style: none;
+}
+
+.skills-list li {
+    padding: 6px 0;
+    border-bottom: 1px solid var(--secondary-color);
+    font-weight: 400;
+    color: var(--text-light);
+    /* Teks terang */
+}
+
+.skills-list li i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.contact-section {
+    text-align: center;
+    background-color: var(--background-translucent-dark);
+    /* Transparan */
+}
+
+.contact-lead {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    color: var(--text-light);
+    /* Teks terang */
+}
+
+.contact-links-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-link-item {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Lebih transparan */
+    border: 3px solid var(--text-light);
+    border-radius: 0;
+    padding: 20px;
+    text-decoration: none;
+    color: var(--text-light);
+    /* Teks terang */
+    display: flex;
+    align-items: center;
+    text-align: left;
+    box-shadow: 2px 2px 0px var(--secondary-color);
+}
+
+.contact-link-item:hover {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0px var(--text-light);
+    border-color: var(--primary-color);
+}
+
+.contact-link-item i {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-right: 15px;
+}
+
+.link-info h4 {
+    margin: 0;
+    font-size: 1.1em;
+    color: var(--text-light);
+    /* Teks terang */
+    text-shadow: none;
+}
+
+.link-info p {
+    margin: 0;
+    font-size: 0.9em;
+    color: var(--text-light);
+    /* Teks terang */
+}
+
+.footer {
+    background-color: var(--background-dark);
+    /* Footer tetap solid gelap */
+    color: var(--text-light);
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9em;
+    border-top: 3px solid var(--text-light);
+}
+
+.fade-in-on-scroll {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-on-scroll.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+@media (max-width: 900px) {
+    section {
+        padding: 60px 4%;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        min-height: auto;
+    }
+
+    .hero-content,
+    .hero-image {
+        max-width: 100%;
+    }
+
+    .hero-content {
+        order: 2;
+    }
+
+    .hero-image {
+        order: 1;
+        margin-bottom: 30px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
+
+    .role {
+        font-size: 1.4em;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-links-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: var(--background-translucent-dark);
+        /* Mobile nav juga transparan */
+        width: 100%;
+        border: 3px solid var(--text-light);
+        box-shadow: 4px 4px 0px var(--secondary-color);
+        padding: 10px 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu a {
+        margin: 10px 20px;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--secondary-color);
+    }
+
+    .nav-menu a:last-child {
+        border-bottom: none;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-actions a {
+        margin-right: 0;
+        width: 100%;
+        text-align: center;
+    }
+}
